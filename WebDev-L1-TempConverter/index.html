@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Temperature Converter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&family=Newsreader:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="converter">
+    <h1>Temperature Converter</h1>
+    <p class="intro">Enter a temperature, choose its unit, and see it in all three units.</p>
+
+    <form id="form" novalidate>
+      <label for="value">Temperature</label>
+      <input id="value" type="text" inputmode="decimal" autocomplete="off" placeholder="For example, 36.6">
+
+      <label for="unit">Convert from</label>
+      <select id="unit">
+        <option value="C">Celsius (°C)</option>
+        <option value="F">Fahrenheit (°F)</option>
+        <option value="K">Kelvin (K)</option>
+      </select>
+
+      <button type="submit" id="convert">Convert</button>
+    </form>
+
+    <p id="error" class="error" role="alert" hidden></p>
+
+    <section id="results" class="results" aria-live="polite" hidden>
+      <h2>Result</h2>
+      <dl>
+        <div><dt>Celsius</dt><dd id="out-C"></dd></div>
+        <div><dt>Fahrenheit</dt><dd id="out-F"></dd></div>
+        <div><dt>Kelvin</dt><dd id="out-K"></dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

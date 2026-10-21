@@ -1,0 +1,96 @@
+:root {
+  --ink: #1b2233;
+  --blue: #1f3a8a;
+  --blue-dark: #162a63;
+  --amber: #f0b43c;
+  --paper: #eef1f7;
+  --white: #ffffff;
+  --muted: #55607a;
+  --red: #b3261e;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+h1, h2, label, button, dt {
+  font-family: "Sora", "Segoe UI", Arial, sans-serif;
+}
+
+.converter {
+  width: 100%;
+  max-width: 26rem;
+  padding: 2rem 1.5rem;
+  background: var(--white);
+  border-top: 6px solid var(--blue);
+  text-align: center;
+}
+
+h1 { font-size: 1.6rem; font-weight: 800; color: var(--blue); margin-bottom: 0.5rem; }
+.intro { color: var(--muted); margin-bottom: 1.5rem; }
+
+form { display: flex; flex-direction: column; text-align: left; }
+label { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.35rem; }
+
+input, select {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  margin-bottom: 1.1rem;
+  font: inherit;
+  color: var(--ink);
+  background: var(--white);
+  border: 2px solid #b9c2d6;
+  border-radius: 0.25rem;
+}
+input:focus-visible, select:focus-visible, button:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 2px;
+}
+input.invalid { border-color: var(--red); }
+
+button {
+  padding: 0.85rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--white);
+  background: var(--blue);
+  border: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+button:hover { background: var(--blue-dark); }
+
+.error {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  color: var(--red);
+  background: #fdecea;
+  border-left: 4px solid var(--red);
+  text-align: left;
+}
+
+.results { margin-top: 1.5rem; }
+.results h2 { font-size: 1.1rem; color: var(--blue); margin-bottom: 0.75rem; }
+dl > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0.8rem;
+  background: var(--paper);
+  border-left: 4px solid var(--amber);
+}
+dl > div + div { margin-top: 0.5rem; }
+dt { font-weight: 600; font-size: 0.95rem; }
+dd { font-weight: 500; }
+
+[hidden] { display: none; }
